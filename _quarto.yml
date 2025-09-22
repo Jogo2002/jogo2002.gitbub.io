@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik"
+  title: "Josh Goldhaber"
   navbar:
     left:
       - href: index.qmd
