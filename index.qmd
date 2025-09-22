@@ -1,13 +1,13 @@
 ---
 title: "Josh Goldhaber"
 toc: false
-about: 
+about:
   template: jolla
   image-shape: round
   image-width: 17em
   links:
     - text: LinkedIn
-    href: https://www.linkedin.com/in/josh-goldhaber-588b76299/
+      href: https://www.linkedin.com/in/josh-goldhaber-588b76299/
 ---
 
 I am Josh Goldhaber, a sophomore at Pitzer College majoring in Data Science at Claremont McKenna College  
