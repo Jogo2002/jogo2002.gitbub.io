@@ -1,10 +1,14 @@
 ---
-title: "jogo2002.gitbub.io"
+title: "Josh Goldhaber"
+toc: false
+about: 
+  template: jolla
+  links:
+    - text: LinkedIn
+    href: https://www.linkedin.com/in/josh-goldhaber-588b76299/
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I am Josh Goldhaber, a sophomore at Pitzer College majoring in Data Science at Claremont McKenna College  
 
 ```{r}
 1 + 1
