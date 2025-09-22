@@ -13,7 +13,8 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: minty
+    dark: solar
     css: styles.css
     toc: true
     page-layout: full
