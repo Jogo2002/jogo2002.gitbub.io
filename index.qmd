@@ -1,8 +1,11 @@
 ---
 title: "Josh Goldhaber"
+image: '/Users/jgoldhaber/Desktop/PPfield'
 toc: false
 about:
   template: jolla
+  image-shape: round
+  image-width: 17em
   links:
     - text: LinkedIn
       href: https://www.linkedin.com/in/josh-goldhaber-588b76299/
