@@ -1,6 +1,6 @@
 ---
 title: "Josh Goldhaber"
-image: '/Users/jgoldhaber/Desktop/PPfield.png'
+image: media/PPfield.jpg
 toc: false
 about:
   template: jolla
