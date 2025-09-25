@@ -8,10 +8,15 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
-      - href: resources.qmd
-        text: Resources
+      - about.qmd
+      - resources.qmd
+      - text: "Data Viz"
+        menu:
+          - text: "Fifa Data"
+            href: FifaData.qmd
+          - text: "Fast Food Cals"
+            href: FastFoodCals.qmd
+
 
 format:
   html:

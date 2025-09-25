@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "All my fav resources!",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nfifa &lt;- read_csv(\"data/week11_fifa_audience.csv\", show_col_types = FALSE)\n\nNew names:\n• `` -&gt; `...1`\n\nggplot(fifa, aes(x = population_share, y = tv_audience_share, color = confederation)) +\n  geom_point(alpha = 0.7, size = 3) +\n  geom_abline(slope = 1, intercept = 0, linetype = \"dashed\", color = \"red\") +\n  scale_x_log10(labels = scales::percent_format(accuracy = 0.01)) +\n  scale_y_log10(labels = scales::percent_format(accuracy = 0.01)) +\n  labs(\n    title = \"FIFA World Cup: Population Share vs. TV Audience Share (log10 scale)\",\n    x = \"Share of World Population (log scale)\",\n    y = \"Share of World Cup TV Audience (log scale)\",\n    color = \"Confederation\"\n  ) +\n  theme_minimal()\n\nWarning in scale_x_log10(labels = scales::percent_format(accuracy = 0.01)):\nlog-10 transformation introduced infinite values.\n\n\nWarning in scale_y_log10(labels = scales::percent_format(accuracy = 0.01)):\nlog-10 transformation introduced infinite values."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This site is a project for my super cool Data Science Class."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Josh Goldhaber",
@@ -7,10 +21,17 @@
     "text": "I am Josh Goldhaber, a sophomore at Pitzer College majoring in Data Science at Claremont McKenna College\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "FifaData.html",
+    "href": "FifaData.html",
+    "title": "Fifa Data",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nfifa &lt;- read_csv(\"data/week11_fifa_audience.csv\", show_col_types = FALSE)\n\nNew names:\n• `` -&gt; `...1`\n\nggplot(fifa, aes(x = population_share, y = tv_audience_share, color = confederation)) +\n  geom_point(alpha = 0.7, size = 3) +\n  geom_abline(slope = 1, intercept = 0, linetype = \"dashed\", color = \"red\") +\n  scale_x_log10(labels = scales::percent_format(accuracy = 0.01)) +\n  scale_y_log10(labels = scales::percent_format(accuracy = 0.01)) +\n  labs(\n    title = \"FIFA World Cup: Population Share vs. TV Audience Share (log10 scale)\",\n    x = \"Share of World Population (log scale)\",\n    y = \"Share of World Cup TV Audience (log scale)\",\n    color = \"Confederation\"\n  ) +\n  theme_minimal()\n\nWarning in scale_x_log10(labels = scales::percent_format(accuracy = 0.01)):\nlog-10 transformation introduced infinite values.\n\n\nWarning in scale_y_log10(labels = scales::percent_format(accuracy = 0.01)):\nlog-10 transformation introduced infinite values."
+  },
+  {
+    "objectID": "FastFoodCals.html",
+    "href": "FastFoodCals.html",
+    "title": "Fast Food",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nfastfood &lt;- read_csv(\"data/fastfood_calories.csv\", show_col_types = FALSE)\n\nNew names:\n• `` -&gt; `...1`\n\navg_cal &lt;- fastfood %&gt;%\n  group_by(restaurant) %&gt;%\n  summarise(mean_calories = mean(calories, na.rm = TRUE),\n            n_items = n()) %&gt;%\n  arrange(desc(mean_calories))\n\navg_cal %&gt;%\n  slice_head(n = 10) %&gt;%\n  ggplot(aes(x = reorder(restaurant, mean_calories),\n             y = mean_calories)) +\n  geom_col(fill = \"tomato\") +\n  coord_flip() +\n  labs(\n    title = \"Top 10 Fast Food Chains by Average Calories per Menu Item\",\n    x = \"Restaurant\",\n    y = \"Average Calories\"\n  ) +\n  theme_minimal()"
   }
 ]

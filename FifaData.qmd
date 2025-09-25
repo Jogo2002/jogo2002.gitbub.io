@@ -1,5 +1,10 @@
 ---
-title: "All my fav resources!"
+title: "Fifa Data"
+description: |
+  Analysis of FIFA attendance data from TidyTuesday
+author: Josh Goldhaber
+date: September 24, 2025
+format: html
 ---
 
 ```{r}

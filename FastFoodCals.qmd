@@ -1,0 +1,36 @@
+---
+title: "Fast Food"
+description: |
+  Analysis of Fast Food Calorie data from TidyTuesday
+author: Josh Goldhaber
+date: September 24, 2025
+format: html
+---
+
+
+```{r}
+library(tidyverse)
+
+fastfood <- read_csv("data/fastfood_calories.csv", show_col_types = FALSE)
+
+avg_cal <- fastfood %>%
+  group_by(restaurant) %>%
+  summarise(mean_calories = mean(calories, na.rm = TRUE),
+            n_items = n()) %>%
+  arrange(desc(mean_calories))
+
+avg_cal %>%
+  slice_head(n = 10) %>%
+  ggplot(aes(x = reorder(restaurant, mean_calories),
+             y = mean_calories)) +
+  geom_col(fill = "tomato") +
+  coord_flip() +
+  labs(
+    title = "Top 10 Fast Food Chains by Average Calories per Menu Item",
+    x = "Restaurant",
+    y = "Average Calories"
+  ) +
+  theme_minimal()
+
+```
+
