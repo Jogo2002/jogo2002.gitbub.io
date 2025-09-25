@@ -2,24 +2,4 @@
 title: "All my fav resources!"
 ---
 
-```{r}
-library(tidyverse)
-
-fifa <- read_csv("data/week11_fifa_audience.csv", show_col_types = FALSE)
-
-ggplot(fifa, aes(x = population_share, y = tv_audience_share, color = confederation)) +
-  geom_point(alpha = 0.7, size = 3) +
-  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +
-  scale_x_log10(labels = scales::percent_format(accuracy = 0.01)) +
-  scale_y_log10(labels = scales::percent_format(accuracy = 0.01)) +
-  labs(
-    title = "FIFA World Cup: Population Share vs. TV Audience Share (log10 scale)",
-    x = "Share of World Population (log scale)",
-    y = "Share of World Cup TV Audience (log scale)",
-    color = "Confederation"
-  ) +
-  theme_minimal()
-
-
-```
 
